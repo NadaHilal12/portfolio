@@ -1,6 +1,4 @@
-/* =========================================
-   RESET
-========================================= */
+
 *{
     padding: 0;
     margin: 0;
@@ -44,9 +42,7 @@ section{
     padding: 70px 8%;
 }
 
-/* =========================================
-   NAVBAR
-========================================= */
+
 nav{
     width: 100%;
     min-height: 70px;
@@ -68,7 +64,7 @@ nav img{
     filter: invert(1);
 }
 
-/* يخلي أول لينك يبعد لليمين وباقي اللينكات ورا بعض */
+
 nav a:first-of-type{
     margin-left: auto;
 }
@@ -100,9 +96,7 @@ nav a:hover::after{
     width: 100%;
 }
 
-/* =========================================
-   HERO / HOME
-========================================= */
+
 .info{
     min-height: 90vh;
     display: flex;
@@ -144,9 +138,7 @@ nav a:hover::after{
     display: block;
 }
 
-/* =========================================
-   ABOUT
-========================================= */
+
 .about{
     background-color: var(--light-bg);
     text-align: center;
@@ -175,9 +167,7 @@ nav a:hover::after{
     font-size: 17px;
 }
 
-/* =========================================
-   EDUCATION
-========================================= */
+
 .Education{
     background-color: var(--white);
 }
@@ -222,9 +212,7 @@ nav a:hover::after{
     font-weight: bold;
 }
 
-/* =========================================
-   SKILLS
-========================================= */
+
 .skills-section{
     background-color: var(--dark);
     color: var(--white);
@@ -280,9 +268,7 @@ nav a:hover::after{
     color: var(--accent);
 }
 
-/* =========================================
-   TRAINING / WORK EXPERIENCE
-========================================= */
+
 .training{
     background-color: var(--light-bg);
 }
@@ -325,9 +311,7 @@ nav a:hover::after{
     color: var(--accent-dark);
 }
 
-/* =========================================
-   SERVICES
-========================================= */
+
 .service{
     background-color: var(--dark);
     color: var(--white);
@@ -370,9 +354,6 @@ nav a:hover::after{
     font-size: 14px;
 }
 
-/* =========================================
-   PROJECTS
-========================================= */
 .projects-section{
     background-color: var(--light-bg);
 }
@@ -442,9 +423,7 @@ nav a:hover::after{
     box-shadow: 0 4px 15px rgba(28,11,46,.15);
 }
 
-/* =========================================
-   CONTACT
-========================================= */
+
 .contact{
     background-color: var(--dark);
     color: var(--white);
@@ -478,9 +457,7 @@ nav a:hover::after{
     filter: invert(1);
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+
 @media (max-width: 768px){
     nav{
         flex-wrap: wrap;
