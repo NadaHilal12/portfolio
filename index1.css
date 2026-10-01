@@ -1,4 +1,6 @@
-
+/* =========================================
+   RESET
+========================================= */
 *{
     padding: 0;
     margin: 0;
@@ -42,7 +44,16 @@ section{
     padding: 70px 8%;
 }
 
+/* Keyboard focus (accessibility) */
+a:focus-visible,
+button:focus-visible{
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
 
+/* =========================================
+   NAVBAR
+========================================= */
 nav{
     width: 100%;
     min-height: 70px;
@@ -64,7 +75,7 @@ nav img{
     filter: invert(1);
 }
 
-
+/* يخلي أول لينك يبعد لليمين وباقي اللينكات ورا بعض */
 nav a:first-of-type{
     margin-left: auto;
 }
@@ -96,7 +107,9 @@ nav a:hover::after{
     width: 100%;
 }
 
-
+/* =========================================
+   HERO / HOME
+========================================= */
 .info{
     min-height: 90vh;
     display: flex;
@@ -138,7 +151,9 @@ nav a:hover::after{
     display: block;
 }
 
-
+/* =========================================
+   ABOUT
+========================================= */
 .about{
     background-color: var(--light-bg);
     text-align: center;
@@ -167,9 +182,18 @@ nav a:hover::after{
     font-size: 17px;
 }
 
-
+/* =========================================
+   EDUCATION
+========================================= */
 .Education{
     background-color: var(--white);
+}
+
+.logo_uni img{
+    width: 90px;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
 }
 
 .Education h2{
@@ -189,16 +213,16 @@ nav a:hover::after{
     white-space: pre-line;
 }
 
+.Education h4{
+    margin-bottom: 12px;
+    color: var(--dark);
+}
+
 .Education ul{
     background-color: var(--light-bg);
     border-left: 4px solid var(--accent-dark);
     padding: 20px 25px;
     border-radius: 6px;
-}
-
-.Education h4{
-    margin-bottom: 12px;
-    color: var(--dark);
 }
 
 .Education li{
@@ -212,7 +236,9 @@ nav a:hover::after{
     font-weight: bold;
 }
 
-
+/* =========================================
+   SKILLS
+========================================= */
 .skills-section{
     background-color: var(--dark);
     color: var(--white);
@@ -268,7 +294,9 @@ nav a:hover::after{
     color: var(--accent);
 }
 
-
+/* =========================================
+   TRAINING / WORK EXPERIENCE
+========================================= */
 .training{
     background-color: var(--light-bg);
 }
@@ -311,7 +339,9 @@ nav a:hover::after{
     color: var(--accent-dark);
 }
 
-
+/* =========================================
+   SERVICES
+========================================= */
 .service{
     background-color: var(--dark);
     color: var(--white);
@@ -354,6 +384,9 @@ nav a:hover::after{
     font-size: 14px;
 }
 
+/* =========================================
+   PROJECTS
+========================================= */
 .projects-section{
     background-color: var(--light-bg);
 }
@@ -373,6 +406,10 @@ nav a:hover::after{
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(28,11,46,.08);
+}
+
+.project + .project{
+    margin-top: 30px;
 }
 
 .project-info{
@@ -423,7 +460,9 @@ nav a:hover::after{
     box-shadow: 0 4px 15px rgba(28,11,46,.15);
 }
 
-
+/* =========================================
+   CONTACT
+========================================= */
 .contact{
     background-color: var(--dark);
     color: var(--white);
@@ -457,7 +496,81 @@ nav a:hover::after{
     filter: invert(1);
 }
 
+/* ---------- Contact form (WhatsApp) ---------- */
+.contact-form{
+    max-width: 600px;
+    margin: 0 auto 40px;
+    text-align: left;
+    background-color: var(--dark-soft);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(177,151,252,.2);
+}
 
+.form-group{
+    margin-bottom: 18px;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 6px;
+    color: var(--accent);
+    font-size: 15px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 6px;
+    border: 1px solid rgba(177,151,252,.3);
+    background-color: var(--dark);
+    color: var(--white);
+    font-family: inherit;
+    font-size: 15px;
+    transition: border-color .3s, box-shadow .3s;
+}
+
+.form-group textarea{
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+    color: #9C8DB8;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    outline: none;
+    border-color: var(--accent-dark);
+    box-shadow: 0 0 0 3px rgba(124,77,255,.25);
+}
+
+.send-btn{
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--accent-dark);
+    color: var(--white);
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color .3s, color .3s, transform .3s;
+}
+
+.send-btn:hover{
+    background-color: var(--accent);
+    color: var(--dark);
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
 @media (max-width: 768px){
     nav{
         flex-wrap: wrap;
@@ -488,5 +601,9 @@ nav a:hover::after{
 
     .project{
         flex-direction: column;
+    }
+
+    .contact-form{
+        padding: 22px 18px;
     }
 }
